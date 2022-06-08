@@ -21,6 +21,7 @@
 
 chmod +x lib/*.sh
 chmod +x ./*.sh
-touch config/logFileList.txt
-touch config/settings.txt
-echo "logFileList=/var/log" > config/settings.properies
+
+echo "/var/log" >> config/logFileList.txt
+echo "" >> config/logFileList.txt
+echo "backUpPath=[要備份的放置目的]" >> config/settings.properies
