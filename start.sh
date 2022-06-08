@@ -1,10 +1,7 @@
 #! /bin/bin
 
-function getProjectConfig {
-    grep "${1}" projection.properties |cut -d'=' -f2
-}
 
-export basedir=$(getProjectConfig 'localPath')  # 專案環境目錄
+export basedir="/usr/local/bin/syncLogs"  # 專案環境目錄
 
 source $basedir/lib/createSource.sh
 source $basedir/lib/log.sh
