@@ -12,8 +12,9 @@ export backUpPath=$(prop 'backUpPath')
 while read logFileLisI ; do
 
     zc_log INFO ": 開始同步 " ${logFileLisI}
-
-    rsync -qrupt "${logFileLisI}/." "${backUpPath}"
+    if [ -n $logFileLisI ]; then 
+        rsync -qrupt ${logFileLisI}/. "${backUpPath}"
+    fi
     zc_log INFO ":  結束同步 ${logFileLisI}" ;
 
 done < $logFileLisL
