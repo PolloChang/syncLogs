@@ -1,0 +1,4 @@
+log/*.log
+config/logFileList.txt
+config/settings.properies
+projection.properties
