@@ -13,7 +13,7 @@ while read logFileLisI ; do
 
     zc_log INFO ": 開始同步 " ${logFileLisI}
 
-    rsync -qrupt ${logFileLisI}/. "${backUpPath}"
+    rsync -qrupt "${logFileLisI}/." "${backUpPath}"
     zc_log INFO ":  結束同步 ${logFileLisI}" ;
 
 done < $logFileLisL
